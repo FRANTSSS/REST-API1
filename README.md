@@ -1,4 +1,4 @@
-# REST-API version 1.0
+# REST-API version 1.1
 
 methods:
 
