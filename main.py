@@ -1,6 +1,7 @@
 import uvicorn
 from fastapi import FastAPI
-from routers.users import router
+from routers import router
+
 #создание приложения
 app = FastAPI()
 #подключение роутов
