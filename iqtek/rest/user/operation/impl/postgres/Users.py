@@ -1,13 +1,20 @@
 from sqlalchemy import Column, Integer, String
 from sqlalchemy.ext.declarative import declarative_base
 
+__all__ = [
+    "DeclarativeBase",
+    "Users"
+]
+
+
 DeclarativeBase = declarative_base()
 
-#модель таблицы postgresql
+
 class Users(DeclarativeBase):
     __tablename__ = "Users"
-    id = Column(Integer, primary_key=True, autoincrement=True)
-    FIO = Column('FIO', String)
+
+    uuid = Column(String, primary_key=True)
+    full_name = Column('full_name', String)
 
     def __repr__(self):
-        return f'{{"id": {self.id}, "FIO": {self.FIO}}}'
+        return f"{{'uuid': {self.uuid}, 'full_name': {self.full_name}}}"
