@@ -13,7 +13,7 @@ __all__ = [
 T = TypeVar('T')
 
 
-class IocImpl(Ioc):
+class IocImpl:
     def __init__(self):
         self.__instances: MutableMapping[Type[T], T] = {}
 
